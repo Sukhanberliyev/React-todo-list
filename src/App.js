@@ -1,9 +1,15 @@
 import './App.css';
 
+import NavigationBar from './components/NavigationBar';
+import NewTodo from './components/NewTodo';
+import TodoList from './components/TodoList';
+
 function App() {
   return (
     <div className="App">
-    <h1>Hello World</h1>
+    <NavigationBar  />
+    <NewTodo />
+    <TodoList />
     </div>
   );
 }
