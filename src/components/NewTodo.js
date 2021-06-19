@@ -1,6 +1,6 @@
 import React, { useRef, useContext } from "react";
 
-import { TodoContext } from '../store/todo-context';
+import { TodoContext } from "../store/todo-context";
 import classes from "./NewTodo.module.css";
 
 const NewTodo = () => {
@@ -16,6 +16,8 @@ const NewTodo = () => {
       return;
     }
     todosCtx.addTodo(enteredText);
+
+    todoTextInputRef.current.value = "";
   };
 
   return (
