@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useContext } from "react";
 
-import TodoItem from './TodoItem';
+import TodoItem from "./TodoItem";
+import { TodoContext } from "../store/todo-context";
 import classes from "./TodoList.module.css";
 
 const TodoList = () => {
+  const todosCtx = useContext(TodoContext);
   return (
     <ul>
-      <TodoItem />
+      {todosCtx.items.map((item) => (
+        <TodoItem
+          key={item.id}
+          text={item.text}
+          onRemoveTodo={todosCtx.removeTodo.bind(null, item.id)}
+        />
+      ))}
     </ul>
-  )
-}
+  );
+};
 
-export default TodoList
+export default TodoList;

@@ -7,11 +7,15 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 const TodoItem = (props) => {
   return (
     <li className={classes.item}>
-      Hello World
-      {/* {props.text} */}
+      {props.text}
       <div className={classes.actions}>
         <input className={classes.checkbox} type="checkbox" name="checked" />
-        <FontAwesomeIcon icon={faTrashAlt} className={classes.icon} size="lg" />
+        <FontAwesomeIcon
+          icon={faTrashAlt}
+          className={classes.icon}
+          size="lg"
+          onClick={props.onRemoveTodo}
+        />
       </div>
     </li>
   );
