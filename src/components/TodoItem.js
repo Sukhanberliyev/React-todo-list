@@ -9,7 +9,7 @@ const TodoItem = (props) => {
     <li className={classes.item}>
       {props.text}
       <div className={classes.actions}>
-        <input className={classes.checkbox} type="checkbox" name="checked" />
+        {/* <input className={classes.checkbox} type="checkbox" name="checked" /> */}
         <FontAwesomeIcon
           icon={faTrashAlt}
           className={classes.icon}
