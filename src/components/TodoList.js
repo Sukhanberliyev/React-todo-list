@@ -1,16 +1,18 @@
-import TodoItem from "./TodoItem";
+import React, { useContext } from "react";
 
+import TodoItem from "./TodoItem";
+import { TodoContext } from "../store/todo-context";
 import classes from "./TodoList.module.css";
 
-const TodoList = (props) => {
-  // const todosCtx = useContext(TodoContext);
+const TodoList = () => {
+  const todosCtx = useContext(TodoContext);
   return (
     <ul>
-      {props.items.map((item) => (
+      {todosCtx.items.map((item) => (
         <TodoItem
           key={item.id}
           text={item.text}
-          onRemoveTodo={props.onRemoveTodo.bind(null, item.id)}
+          onRemoveTodo={todosCtx.removeTodo.bind(null, item.id)}
         />
       ))}
     </ul>
