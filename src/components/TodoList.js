@@ -3,7 +3,7 @@ import TodoItem from "./TodoItem";
 import classes from "./TodoList.module.css";
 
 const TodoList = (props) => {
-  // const todosCtx = useContext(TodoContext);
+  
   return (
     <ul>
       {props.items.map((item) => (
