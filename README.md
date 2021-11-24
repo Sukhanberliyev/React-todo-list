@@ -1,8 +1,6 @@
 # React-todo-list
 A personal task management application to help you get organized and to get things done. This app has been created with the purpose of learning and practicing React and its features.
 
-## Live preview
-<a href="https://my-project-ea9f5.web.app/">React-ToDo</a>
 
 
 ## Table of contents
